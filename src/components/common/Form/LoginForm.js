@@ -78,7 +78,7 @@ export default function LoginForm(props) {
 
   return (
 
-    <div className="card cui2 py_30 px_20 rs-login-form">
+    <div className="card cui2 px_20 rs-login-form noshadow">
       <div className="card-body pb-0">
         {formTitle !== '' && <div className="card-title text-primary text-uppercase text-center">{formTitle}</div>}
         <form className="fui fui2"
@@ -113,7 +113,7 @@ export default function LoginForm(props) {
             <span><Link className='text-muted tdn' to="/forgot-password">Forgot Password?</Link></span>
           </div>
           <div className="form-group d-flex align-items-center justify-content-center">
-            <input className="btn btn-primary btnui2" type="submit" name="submit" value="Login" />
+            <input className="btn btn-primary btnui2 w-100" type="submit" name="submit" value="Login" />
           </div>
           {submitStatus && <AlertBox type='success' message={formMessage.formSuccess} />}
         </form>

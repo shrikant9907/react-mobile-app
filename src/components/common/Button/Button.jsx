@@ -1,5 +1,5 @@
 import React from "react";
-import { toast } from "react-toastify";
+import { toast } from "react-hot-toast";
 
 const Button = (props) => {
   const btnClasses = props.classes ? props.classes : 'btn btn-primary btnui1';

@@ -91,7 +91,7 @@ export default function ForgotPasswordForm(props) {
             <div className='text-muted lh15 f12 text-sm'>* We will send a reset password link on your registered email address.</div>
           </div>
           <div className="form-group d-flex align-items-center justify-content-center">
-            <input className="btn btn-primary btnui2" type="submit" name="submit" value="Get New Password" />
+            <input className="btn btn-primary btnui2 w-100" type="submit" name="submit" value="Get New Password" />
           </div>
           <div className="text-center mb_10">
             <Link className='text-primary tdn' to="/login">Go Back To Login</Link>

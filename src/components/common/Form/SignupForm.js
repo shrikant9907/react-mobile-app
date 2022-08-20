@@ -88,7 +88,7 @@ export default function SignupForm(props) {
 
   return (
 
-    <div className="card cui2 py_30 px_20 rs-signup-form">
+    <div className="card cui2 px_20 rs-signup-form">
       <div className="card-body pb-0">
         {formTitle !== '' && <div className="card-title text-primary text-uppercase text-center">{formTitle}</div>}
         <form className="fui fui2"
@@ -128,7 +128,7 @@ export default function SignupForm(props) {
             <input autoComplete='off' maxLength="15" onChange={(e) => handleFieldChange(e)} name="cpassword" value={formData?.cpassword} type="password" className="form-control" placeholder="Repeat your password." />
           </div>
           <div className="form-group d-flex align-items-center justify-content-center">
-            <input className="btn btn-primary btnui2" type="submit" name="submit" value="Signup" />
+            <input className="btn btn-primary btnui2 w-100" type="submit" name="submit" value="Signup" />
           </div>
           {submitStatus && <AlertBox type='success' message={formMessage.formSuccess} />}
         </form>

@@ -1,0 +1,43 @@
+$bgColor: #ffffff;
+$linkColor: #000000;
+$iconColor: red;
+$primaryColor: #ff5200;
+
+.admin-header {
+  background-color: $bgColor;
+  display: flex;
+  border:unset;
+  border-radius: 0;
+  padding: 0 5px;
+  position: relative;
+}
+
+.profile-dropdown  {
+  position: fixed !important;
+  top: 3px;
+  right: 12px; 
+  z-index: 1;
+  button {
+    border: unset;
+    border-radius: 25px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 35px;
+    background: transparent;
+    padding: 0px;
+    img {
+      width: 28px;
+      border-radius: 100%;
+      margin-right: 7px;
+    }
+  }
+
+  .dropdown-menu {
+    &.show {
+      right: 0;
+    }
+  }
+}

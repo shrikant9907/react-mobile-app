@@ -1,58 +1,78 @@
-$bgColor: #ffffff;
-$linkColor: #000000;
-$iconColor: red;
-$primaryColor: #ff5200;
+$primaryLightColor: #ffeeee;
 
-.app-sidebar {
-  background-color: $bgColor;
+.sidebar-ui {
+  width: 225px;
   position: fixed;
-  top: 0;
+  content: "";
   left: 0;
   bottom: 0;
-  max-width: 240px;
-  width: 240px;
-  display: flex;
-  border:unset;
-  border-radius: 0;
-  .navbar {
-    flex-flow: column nowrap;
-    .navbar-brand {
+  top: 0;
+  right: 0;
+  z-index: 99;
+  border-right: 1px solid rgb(225 225 225);
+  background-color: #efefef;
+
+  .ssui-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: inherit;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.04);
+    text-align: center;
+
+    .shlink {
+      color: inherit;
+      text-decoration: none;
+      font-size: 20px;
+      padding: 5px 15px;
       width: 100%;
-      text-align: center;
       font-weight: bold;
       text-transform: uppercase;
-      color: $primaryColor;
-      margin-bottom: 10px;
     }
-    .navbar-collapse {
-      flex-direction: column;
+  }
+
+  .ssui-body {
+    position: static;
+    padding: 0;
+    height: calc(100vh - 50px);
+    overflow-y: auto;
+
+    .ssui-link {
+      padding: 15px 0px 15px 50px;
       width: 100%;
-      align-items: flex-start;
-      .navbar-nav {
-        flex-direction: column;
-        width: 100%;
-        margin-bottom: 8px;
-        .nav-item {
-          .nav-link {
-            color: $linkColor;
-            padding: 12px;
-            &:hover {
-              background-color: rgba(0,0,0,0.02);
-            }
-            .nav-icon {
-              width: 20px;
-              display: inline-block;
-              text-align: center;
-              margin-right: 10px;
-              color: $primaryColor;
-              svg,
-              i {
-                font-size: 18px;
-              }
-            }
-          }
+      color: inherit;
+      text-decoration: none;
+      font-size: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      line-height: 1;
+      position: relative;
+
+      .icon {
+        position: absolute;
+        left: 20px;
+        font-size: 18px;
+        color: #666;
+        top: calc(50% - 10px);
+      }
+
+      &:hover {
+        background-color: #fff;
+      }
+
+      &.active {
+        background-color: #117CA6;
+        color: #fff;
+        .icon {
+          color: #fff;
         }
       }
+      
     }
+  }
+
+  .ssui-footer {
+    @extend .ssui-header;
   }
 }

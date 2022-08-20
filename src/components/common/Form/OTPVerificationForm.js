@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import AlertBox from '../Alert/AlertBox';
 import JSONDebug from '../JSONDebug';
-import { toast } from 'react-toastify';
+import { toast } from 'react-hot-toast';
 
 export default function OTPVerificationForm(props) {
 
@@ -65,7 +65,7 @@ export default function OTPVerificationForm(props) {
 
   return (
 
-    <div className="card cui2 py_30 px_20 rs-contact-form">
+    <div className="card cui2 px_20 rs-contact-form">
       <div className="card-body pb-0">
         {formTitle !== '' && <div className="text-primary text-center text-uppercase card-title">{formTitle}</div>}
         <form className="fui fui2"
@@ -82,7 +82,7 @@ export default function OTPVerificationForm(props) {
             <input maxLength="4" onChange={(e) => handleFieldChange(e)} name="otpCode" value={formData?.otpCode} type="text" className="form-control" placeholder="One Time Password" />
           </div>
           <div className="form-group d-flex align-items-center justify-content-center">
-            <input disabled={(formData.otpCode.length !== 4) ? true : false} className="btn btn-primary btnui2" type="submit" name="submit" value="Submit OTP" />
+            <input disabled={(formData.otpCode.length !== 4) ? true : false} className="btn btn-primary btnui2 w-100" type="submit" name="submit" value="Submit OTP" />
           </div>
           <div className="mb_20 d-flex align-items-center justify-content-center">
             <span onClick={() => resetOTPCode()} className='text-primary c_p'>Resend OTP</span>

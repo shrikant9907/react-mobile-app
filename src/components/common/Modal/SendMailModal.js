@@ -3,7 +3,7 @@ import { Button, Modal } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
 import axios from "axios";
 import { postLog } from "../../../../_apis/api";
-import { toast } from "react-toastify";
+import { toast } from "react-hot-toast";
 const apiURL2 = process.env.REACT_APP_API_URL2;
 
 const SendMailModal = (props) => {
